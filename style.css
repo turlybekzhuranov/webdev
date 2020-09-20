@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto';
+    width: 1600px;
+}
+
+header {
+    background: black;
+    width: 1600px;
+    height: 95px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+header h1 {
+    background: red;
+}
+.navbar {
+    display: flex;
+    width: 582px;
+    height: 45px;
+    background: green;
+    margin: 25px 516px 25px 388.89px;
+    justify-content: space-between;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+.navbar .nav-link {
+    margin-top: 16px;
+}
+
+.navbar .logo {
+    width: 44px;
+}
+
+main {
+    background: green;
+    height: 3903px;
+}
+
+main .your-life {
+    background: yellow;
+    height: 683px;
+}
+main .rappresent {
+    background: violet;
+    height: 842px;
+}
+main .our-community {
+    background: teal;
+    height: 504px;
+}
+main .implement {
+    background: springgreen;
+    height: 842px;
+}
+main .subscribe {
+    background: yellowgreen;
+    height: 598px;
+}
+main .download {
+    background: turquoise;
+    height: 468px;
+}
+
+footer {
+    background: red;
+    height: 184px;
+}
