@@ -1,78 +1,577 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     width: 1600px;
+    margin: auto;
 }
 
 header {
-    background: black;
-    width: 1600px;
+    position: fixed;
+    z-index: 101;
+    color: #ffffff;
     height: 95px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+    background-color: #000000;
 }
 
 header h1 {
-    background: red;
+    padding: 20px 25px;
+    margin: 0px 25px;
+    width: 400px;
 }
-.navbar {
-    display: flex;
-    width: 582px;
-    height: 45px;
-    background: green;
-    margin: 25px 516px 25px 388.89px;
-    justify-content: space-between;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Roboto';
-    font-size: 14px;
-}
-
-.navbar .nav-link {
-    margin-top: 16px;
-}
-
-.navbar .logo {
+header .logo {    
+    position: absolute;
     width: 44px;
+    height: 45px;
+    left: calc(50% - 44px/2);
+    top: 25px;
+}
+header .logo img {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 0px;
+    top: 0px;
 }
 
-main {
-    background: green;
-    height: 3903px;
+
+.nav-header .menu-item{
+    position: absolute;
+    height: 20px;
+    top: 38px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+}
+.active-menu-item {
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    left: calc(50% - 38px/2 - 279px);
+    top: 38px;
+}
+.active-menu-item img {
+    position: absolute;
+    width: 38px;
+    height: 1px;
+    left: 0px;
+    top: 20px;
 }
 
-main .your-life {
-    background: yellow;
-    height: 683px;
+.your-life {
+    height: 744px;
+    color: #ffffff;
 }
-main .rappresent {
-    background: violet;
+.your-life .bg-image {
+    position: absolute;
+    height: 744px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets/images/bg-image.png);
+}
+.your-life h1 {
+    position: absolute;
+    width: 730px;
+    height: 75px;
+    left: calc(50% - 724px/2);
+    top: calc(50% - 246px);
+    font-size: 64px;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+}
+
+.your-life p {
+    position: absolute;
+    width: 504px;
+    height: 50px;
+    left: calc(50% - 252px);
+    top: calc(50% - 148px);
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+}
+
+.your-life .navbar-social {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    left: calc(50% - 85px);
+    top: 634px;
+}
+.your-life .social-items {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+}
+.social-items svg{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+}
+
+
+.rappresent {
+    position: absolute;
+    width: 1600px;
     height: 842px;
+    top: 744px;
+    background: #FFFFFF;
 }
-main .our-community {
-    background: teal;
+.rappresent .content-block {
+    position: absolute;
+    width: 407px;
+    height: 233px;
+    left: 269px;
+    top: 295px;
+}
+.rappresent .content-block h2 {
+    position: absolute;
+    width: 367px;
+    height: 57px;
+    left: 0px;
+    top: 0px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #373737;
+}
+.rappresent .content-block .tasks {
+    position: absolute;
+    width: 407px;
+    height: 80px;
+    left: 0px;
+    top: 77px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #4E4E4E;
+}
+.rappresent .content-image-1 {
+    position: absolute;
+    width: 407px;
+    height: 582px;
+    left: 924px;
+    top: 120px;
+    background: url("assets/images/content-image-1.png");
+}
+
+.btn-main {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 47px;
+    position: absolute;
+    width: 184px;
+    height: 46px;
+    background: #00AFDB;
+    border: none;
+}
+
+.btn-main:hover {
+    background: #009CC2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn-main p {
+    position: static;
+    width: 90px;
+    height: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 0px 0px;
+}
+
+.our-community {
+    position: absolute;
     height: 504px;
+    top: 1586px;
+    background: #F5F6F7;
 }
-main .implement {
-    background: springgreen;
+.our-community .user-card {
+    position: absolute;
+    width: 298px;
+    height: 175px;
+    left: 269px;
+    top: 155px;
+}
+.user-card .userpic {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 127px;
+    top: 0px;
+    background: url("assets/images/userpic.png");
+}
+.user-card h3 {
+    position: absolute;
+    width: 160px;
+    height: 20px;
+    left: 70px;
+    top: 65px;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    color: #373737;
+}
+.user-card p {
+    position: absolute;
+    width: 298px;
+    height: 80px;
+    left: 0px;
+    top: 92px;
+    font-size: 14px;
+    line-height: 140%;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #4E4E4E;
+}
+
+.our-community {
+    position: absolute;
+    height: 504px;
+    top: 1586px;
+}
+.our-community .slider-nav-items {
+    position: absolute;
+    width: 83px;
+    height: 18px;
+    right: 269px;
+    top: 82px;
+}
+.arrow {
+    position: absolute;
+    width: 9px;
+    height: 14px;
+    top: 2px;
+}
+.arrow:hover {
+    cursor: pointer;
+}
+.arrow-right {
+    left: 74px;
+    background: url(assets/images/arrow-right.png);
+}
+.arrow-left {
+    left: 0px;
+    background: url(assets/images/arrow-left.png);
+}
+.pagination {
+    position: absolute;
+    width: 37px;
+    height: 18px;
+    left: 23px;
+    top: 0px;
+}
+.pagination .divider-icon {
+    position: absolute;
+    width: 7px;
+    height: 14px;
+    left: 15px;
+    top: 2px;
+    background: url(assets/images/divider-icon.png);
+}
+.pagination .page {
+    position: absolute;
+    width: 11px;
+    height: 18px;
+    top: 0px;
+    font-size: 18px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #373737;
+}
+
+.our-community .slider-items {
+    position: absolute;
+    width: 894px;
+    height: 244px;
+    left: 706px;
+    top: 120px;
+}
+.slider-items .rectangle {
+    position: absolute;
+    width: 407px;
+    height: 244px;
+    top: 0px;
+}
+#rectangle-1 {
+    left: 0px;
+    background: url(assets/images/Rectangle-1.png), #C4C4C4;
+}
+#rectangle-2 {
+    left: 435px;
+    background: url(assets/images/Rectangle-2.png), #C4C4C4;
+}
+#rectangle-3 {
+    left: 872px;
+    background: url(assets/images/Rectangle-3.png), #C4C4C4;
+    clip: rect(auto, 20px, auto, auto);
+}
+
+.implement {
+    position: absolute;
     height: 842px;
+    top: 2090px;
+    background: #FFFFFF;
 }
-main .subscribe {
-    background: yellowgreen;
-    height: 598px;
+.implement .content-image-2 {
+    position: absolute;
+    width: 407px;
+    height: 582px;
+    left: 269px;
+    top: 120px;
+    background: url(assets/images/content-image-2.png);
 }
-main .download {
-    background: turquoise;
-    height: 468px;
+.implement .content-block {
+    position: absolute;
+    width: 407px;
+    height: 184px;
+    left: 815px;
+    top: 319px;
+}
+.implement .content-block h2 {
+    position: absolute;
+    width: 298px;
+    height: 28px;
+    left: 0px;
+    top: 0px;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #373737;
+}
+.implement .content-block .implementation {
+    position: absolute;
+    width: 407px;
+    height: 60px;
+    left: 0px;
+    top: 48px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #4E4E4E;
+}
+
+.sign-up {
+    position: absolute;
+    height: 524px;
+    top: 2932px;
+}
+.sign-up .form {
+    position: absolute;
+    width: 406px;
+    height: 104px;
+    left: 597px;
+    top: 200px;
+}
+.sign-up form {
+    position: absolute;
+    width: 406px;
+    height: 46px;
+    left: 0px;
+    top: 58px;
+}
+.sign-up form button {
+    position: absolute;
+    width: 66px;
+    height: 46px;
+    left: 340px;
+    top: 0px;
+    background: #00AFDB;
+    border: none;
+}
+.sign-up .check-icon {
+    width: 66px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+    background: url(assets/images/btn-submit.png);
+}
+.check-icon:hover {
+    cursor: pointer;
+}
+.sign-up form input {
+    position: absolute;
+    width: 340px;
+    height: 45px;
+    border: none;
+}
+::placeholder {
+    padding: 13px 24px;
+}
+.sign-up h2 {
+    position: absolute;
+    width: 380px;
+    height: 28px;
+    left: 13px;
+    top: 0px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.sign-up .frame-7 {
+    position: absolute;
+    height: 524px;
+    background: url(assets/images/pexels-christina-morillo-1181675.png);
+}
+
+.download {
+    position: absolute;
+    height: 464px;
+    top: 3456px;
+    background: #F5F6F7;
+}
+.download h2 {
+    position: absolute;
+    width: 250px;
+    height: 28px;
+    left: 675px;
+    top: 120px;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #373737;
+}
+.download p {
+    position: absolute;
+    width: 480px;
+    height: 40px;
+    left: 560px;
+    top: 168px;
+    font-size: 14px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4E4E4E;
+}
+.download .btn-store {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    position: absolute;
+    width: 186px;
+    height: 46px;
+    top: 238px;
+    background: #00AFDB;
+    border: none;
+}
+.btn-store:hover {
+    cursor: pointer;
+}
+.download .icons {
+    position: absolute;
+    left: calc(50% + 33px);
+    width: 59px;
+    height: 46px;
+    top: 0px;
+    background: #009CC2;
+    border-radius: 0px;
+    flex: none;
+    order: 1;
+    align-self: center;
+}
+.icons:hover {
+    cursor: pointer;
+}
+.download .icon-apple {
+    background: url(assets/images/icon-apple.png);
+}
+.download .icon-android {
+    background: url(assets/images/icon-android.png);
+}
+.download .btn-store p {
+    height: 16px;
+    left: calc(50% - 75px);
+    top: calc(50% - 16px/2);
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 footer {
-    background: red;
-    height: 184px;
+    position: absolute;
+    height: 185px;
+    top: 3920px;
+    background: #000000;
+}
+
+footer .logo {
+    position: absolute;
+    width: 44px;
+    height: 45px;
+    left: 778px;
+    top: 60px;
+}
+
+footer .copyright {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    top: 73px;
+    left: 1270px;
+    color: #818181;
+}
+
+footer .nav-items {
+    position: absolute;
+    width: 236px;
+    height: 20px;
+    left: 160px;
+    top: 73px;
+}
+
+footer .nav-items a {
+    position: absolute;
+    width: 65px;
+    height: 20px;
+    left: 171px;
+    top: 0px;
+    list-style: none;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer .nav-items img {
+    position: absolute;
+    width: 8px;
+    height: 0px;
+    top: 10px;
+    border: 1px solid #4E4E4E;
+    transform: rotate(-90deg);
 }
